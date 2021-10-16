@@ -1,0 +1,44 @@
+.countdown_app {
+  display: flex;
+  justify-content: space-between;
+
+  .countdown_label {
+    width: 100%;
+    text-align: center;
+
+    h2 {
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 1.9rem;
+      color: #8385a9;
+      letter-spacing: 0.5rem;
+      padding-top: 2rem;
+      text-transform: uppercase;
+    }
+
+    .countdown_label_content {
+      height: 18.4rem;
+    }
+
+    .countdown_time {
+      height: 15rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $Dark-desaturated-blue;
+      border-radius: 0.8rem;
+
+      p {
+        font-size: 8rem;
+        letter-spacing: -0.24rem;
+        line-height: 7.1rem;
+        font-weight: bold;
+        color: $Soft-red;
+      }
+    }
+  }
+
+  .countdown_label:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}

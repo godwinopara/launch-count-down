@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 700;
+  background: $Black;
+  color: $White;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 2;
+}
+
+main {
+  width: 100%;
+  max-width: 700px;
+}
