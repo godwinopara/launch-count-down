@@ -42,3 +42,52 @@
     margin-right: 3.2rem;
   }
 }
+
+// footer
+
+footer {
+  background-image: url("/images/pattern-hills.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  .footer-social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-top: 3rem;
+
+    li {
+      cursor: pointer;
+      height: 2.4rem;
+      width: 2.4rem;
+    }
+    li:not(:last-child) {
+      margin-right: 3.2rem;
+    }
+
+    .icons {
+      background: #8385a9;
+    }
+
+    .icons:hover {
+      background: $Soft-red;
+    }
+
+    .facebook {
+      mask: url("/images/icon-facebook.svg");
+    }
+    .instagram {
+      mask: url("/images/icon-instagram.svg");
+    }
+    .pintrest {
+      mask: url("/images/icon-pinterest.svg");
+    }
+  }
+}
