@@ -1,3 +1,16 @@
+header {
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  h1 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75rem;
+    line-height: 2.9rem;
+  }
+}
+
 .countdown_app {
   display: flex;
   justify-content: space-between;
@@ -32,7 +45,6 @@
         font-size: 8rem;
         letter-spacing: -0.24rem;
         line-height: 7.1rem;
-        font-weight: bold;
         color: $Soft-red;
       }
     }
@@ -50,7 +62,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  min-height: 25vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
