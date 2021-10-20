@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Demo](https://countdown-timer-webapp.netlify.app/)
+- Live Site URL: [CountDown Timer](https://countdown-timer-webapp.netlify.app/)
 
 ## My process
 
