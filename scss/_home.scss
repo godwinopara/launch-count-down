@@ -1,32 +1,31 @@
 header {
   margin-top: 5rem;
-  display: flex;
-  flex-wrap: wrap;
   text-align: center;
+
   h1 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
-    letter-spacing: 0.75rem;
-    line-height: 2.9rem;
+    letter-spacing: 0.614rem;
+    line-height: 2.381rem;
   }
 }
 
 .countdown_app {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 
   .countdown_label {
     width: 100%;
     text-align: center;
+    position: relative;
 
     h2 {
-      font-weight: 700;
-      font-size: 1.4rem;
-      line-height: 1.9rem;
-      color: #8385a9;
-      letter-spacing: 0.5rem;
+      font-size: 0.7rem;
+      line-height: 0.926rem;
+      letter-spacing: 0.296rem;
       padding-top: 2rem;
       text-transform: uppercase;
+      color: #8385a9;
     }
 
     .countdown_label_content {
@@ -34,29 +33,71 @@ header {
     }
 
     .countdown_time {
-      height: 15rem;
       display: flex;
       align-items: center;
       justify-content: center;
       background: $Dark-desaturated-blue;
       border-radius: 0.8rem;
+      min-height: 7rem;
 
       p {
-        font-size: 8rem;
-        letter-spacing: -0.24rem;
+        font-size: 3.6rem;
+        letter-spacing: -0.108rem;
         line-height: 7.1rem;
         color: $Soft-red;
       }
     }
   }
-
   .countdown_label:not(:last-child) {
-    margin-right: 3.2rem;
+    margin-right: 1rem;
+  }
+
+  // the circles at the center of the clock
+  .countdown_label_content::before {
+    content: "";
+    position: absolute;
+    top: 37%;
+    height: 1.2rem;
+    width: 1.2rem;
+    background: $Black;
+    border-radius: 100%;
+    left: -7px;
+  }
+
+  .countdown_label_content::after {
+    content: "";
+    position: absolute;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 100%;
+    background: $Black;
+    right: -7px;
+    top: 37%;
+  }
+
+  // place a line across the numbers
+
+  .countdown_time::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    height: 40%;
+    width: 100%;
+    background: $Dark-blue;
+    opacity: 0.2;
+  }
+
+  .countdown_time::before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    height: 1px;
+    width: 100%;
+    background: $Black;
+    opacity: 0.7;
   }
 }
-
 // footer
-
 footer {
   background-image: url("/images/pattern-hills.svg");
   background-repeat: no-repeat;
@@ -100,6 +141,47 @@ footer {
     }
     .pintrest {
       mask: url("/images/icon-pinterest.svg");
+    }
+  }
+}
+
+// media query
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    h1 {
+      font-size: 2.2rem;
+      letter-spacing: 0.75rem;
+      line-height: 2.9rem;
+    }
+  }
+
+  // main countdown timer container
+
+  .countdown_app {
+    justify-content: space-between;
+
+    .countdown_label {
+      h2 {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        letter-spacing: 0.5rem;
+      }
+
+      .countdown_time {
+        min-height: 15rem;
+
+        p {
+          font-size: 8rem;
+          letter-spacing: -0.24rem;
+          line-height: 7.1rem;
+        }
+      }
+    }
+
+    .countdown_label:not(:last-child) {
+      margin-right: 3.2rem;
     }
   }
 }
